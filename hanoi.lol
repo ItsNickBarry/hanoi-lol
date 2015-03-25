@@ -158,6 +158,7 @@ HAI 1.2
     Very fun.
   TLDR
   IM IN YR LOOP UPPIN YR MOVES TIL I IZ UWIN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
+    VISIBLE SMOOSH "YOU HAVE MOVED " AN MOVES MKAY
     I IZ PRINTING YR TOWERLEFT AN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
     I HAS A FROM
     I HAS A FROMTOP
@@ -208,9 +209,6 @@ HAI 1.2
           BTW TODO make this reloop...
       OIC
 
-      VISIBLE "The FROM before being passed to WATSONTOP:"
-      VISIBLE FROM
-      VISIBLE ""
       FROMTOP R I IZ WATSONTOP YR FROM MKAY
       TOTOP R I IZ WATSONTOP YR TO MKAY
 
@@ -225,7 +223,47 @@ HAI 1.2
 
     IM OUTTA YR LOOP  BTW end of loop to get "to"
 
-    I IZ MOVING YR FROM AN YR FROMTOP AN YR TO AN YR TOTOP MKAY
+    BTW         I IZ MOVING YR FROM AN YR FROMTOP AN YR TO AN YR TOTOP MKAY
+
+    OBTW
+
+    start some crap
+
+
+    TLDR
+
+    TO R SMOOSH FROMTOP AN TO MKAY
+    FROM, WTF?
+      OMG "SMALLMEDIUMBIG"
+        FROM R "MEDIUMBIG"
+        GTFO
+      OMG "MEDIUMBIG"
+        FROM R "BIG"
+        GTFO
+      OMG "SMALLBIG"
+        FROM R "BIG"
+        GTFO
+      OMG "SMALLMEDIUM"
+        FROM R "MEDIUM"
+        GTFO
+      OMG "SMALL"
+        FROM R "EMPTY"
+        GTFO
+      OMG "MEDIUM"
+        FROM R "EMPTY"
+        GTFO
+      OMG "BIG"
+        FROM R "EMPTY"
+        GTFO
+      OMG "EMPTY"
+        GTFO  BTW this shouldn't happen
+    OIC
+    OBTW
+
+    dnd
+
+
+    TLDR
   IM OUTTA YR LOOP  BTW end of main loop
 
   I IZ PRINTING YR TOWERLEFT AN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
