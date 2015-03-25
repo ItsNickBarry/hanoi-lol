@@ -122,35 +122,6 @@ HAI 1.2
     OIC
   IF U SAY SO
 
-  HOW IZ I MOVING YR TOWERFROM AN YR FROMTOP AN YR TOWERTO AN YR TOTOP
-    TOWERTO R SMOOSH FROMTOP AN TOWERTO MKAY
-    TOWERFROM, WTF?
-      OMG "SMALLMEDIUMBIG"
-        TOWERFROM R "MEDIUMBIG"
-        GTFO
-      OMG "MEDIUMBIG"
-        TOWERFROM R "BIG"
-        GTFO
-      OMG "SMALLBIG"
-        TOWERFROM R "BIG"
-        GTFO
-      OMG "SMALLMEDIUM"
-        TOWERFROM R "MEDIUM"
-        GTFO
-      OMG "SMALL"
-        TOWERFROM R "EMPTY"
-        GTFO
-      OMG "MEDIUM"
-        TOWERFROM R "EMPTY"
-        GTFO
-      OMG "BIG"
-        TOWERFROM R "EMPTY"
-        GTFO
-      OMG "EMPTY"
-        GTFO  BTW this shouldn't happen
-    OIC
-  IF U SAY SO
-
   OBTW
     The main game loop.
 
@@ -161,13 +132,15 @@ HAI 1.2
     VISIBLE SMOOSH "YOU HAVE MOVED " AN MOVES MKAY
     I IZ PRINTING YR TOWERLEFT AN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
     I HAS A FROM
+    I HAS A FROMCOMMAND
     I HAS A FROMTOP
     I HAS A TO
+    I HAS A TOCOMMAND
     I HAS A TOTOP
     IM IN YR LOOP
       VISIBLE "GIMMEH WARE TO MOVE FROM"
-      GIMMEH FROM
-      FROM, WTF?
+      GIMMEH FROMCOMMAND
+      FROMCOMMAND, WTF?
         OMG "LEFT"
           FROM R TOWERLEFT
           GTFO
@@ -193,8 +166,8 @@ HAI 1.2
     IM OUTTA YR LOOP  BTW end of loop to get "from"
     IM IN YR LOOP
       VISIBLE "GIMMEH WARE TO MOVE TO"
-      GIMMEH TO
-      TO, WTF?
+      GIMMEH TOCOMMAND
+      TOCOMMAND, WTF?
         OMG "LEFT"
           TO R TOWERLEFT
           GTFO
@@ -223,47 +196,66 @@ HAI 1.2
 
     IM OUTTA YR LOOP  BTW end of loop to get "to"
 
-    BTW         I IZ MOVING YR FROM AN YR FROMTOP AN YR TO AN YR TOTOP MKAY
+    I HAS A NEWTO
+    I HAS A NEWFROM
+    BOTH SAEM TO AN "EMPTY"
+    O RLY?
+      YA RLY
+        NEWTO R FROMTOP
+      NO WAI
+        NEWTO R SMOOSH FROMTOP AN TO MKAY
+    OIC
 
-    OBTW
-
-    start some crap
-
-
-    TLDR
-
-    TO R SMOOSH FROMTOP AN TO MKAY
     FROM, WTF?
       OMG "SMALLMEDIUMBIG"
-        FROM R "MEDIUMBIG"
+        NEWFROM R "MEDIUMBIG"
         GTFO
       OMG "MEDIUMBIG"
-        FROM R "BIG"
+        NEWFROM R "BIG"
         GTFO
       OMG "SMALLBIG"
-        FROM R "BIG"
+        NEWFROM R "BIG"
         GTFO
       OMG "SMALLMEDIUM"
-        FROM R "MEDIUM"
+        NEWFROM R "MEDIUM"
         GTFO
       OMG "SMALL"
-        FROM R "EMPTY"
+        NEWFROM R "EMPTY"
         GTFO
       OMG "MEDIUM"
-        FROM R "EMPTY"
+        NEWFROM R "EMPTY"
         GTFO
       OMG "BIG"
-        FROM R "EMPTY"
+        NEWFROM R "EMPTY"
         GTFO
       OMG "EMPTY"
         GTFO  BTW this shouldn't happen
     OIC
-    OBTW
 
-    dnd
+    FROMCOMMAND, WTF?
+      OMG "LEFT"
+        TOWERLEFT R NEWFROM
+        GTFO
+      OMG "MIDDLE"
+        TOWERMIDDLE R NEWFROM
+        GTFO
+      OMG "RIGHT"
+        TOWERRIGHT R NEWFROM
+        GTFO
+    OIC
 
+    TOCOMMAND, WTF?
+      OMG "LEFT"
+        TOWERLEFT R NEWTO
+        GTFO
+      OMG "MIDDLE"
+        TOWERMIDDLE R NEWTO
+        GTFO
+      OMG "RIGHT"
+        TOWERRIGHT R NEWTO
+        GTFO
+    OIC
 
-    TLDR
   IM OUTTA YR LOOP  BTW end of main loop
 
   I IZ PRINTING YR TOWERLEFT AN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
