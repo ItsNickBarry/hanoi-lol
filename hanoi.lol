@@ -47,6 +47,8 @@ HAI 1.2
   IF U SAY SO
 
   HOW IZ I WATSONTOP YR TOWER
+    VISIBLE "IN watsontop: "
+    VISIBLE TOWER
     TOWER, WTF?
       OMG "SMALLMEDIUMBIG"
         FOUND YR "SMALL"
@@ -80,7 +82,7 @@ HAI 1.2
 
     FROMTOP, WTF?
       OMG "EMPTY"
-        FROMVALUE R 0
+        FROMVALUE R 4
         GTFO
       OMG "SMALL"
         FROMVALUE R 1
@@ -94,7 +96,7 @@ HAI 1.2
     OIC
     TOTOP, WTF?
       OMG "EMPTY"
-        TOVALUE R 0
+        TOVALUE R 4
         GTFO
       OMG "SMALL"
         TOVALUE R 1
@@ -158,10 +160,11 @@ HAI 1.2
   IM IN YR LOOP UPPIN YR MOVES TIL I IZ UWIN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
     I IZ PRINTING YR TOWERLEFT AN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
     I HAS A FROM
+    I HAS A FROMTOP
     I HAS A TO
+    I HAS A TOTOP
     IM IN YR LOOP
       VISIBLE "GIMMEH WARE TO MOVE FROM"
-      I HAS A FROM
       GIMMEH FROM
       FROM, WTF?
         OMG "LEFT"
@@ -178,12 +181,6 @@ HAI 1.2
           BTW TODO make this reloop
       OIC
 
-      VISIBLE "test after FROM R TOWER.."
-      VISIBLE "TowerLeft is: "
-      VISIBLE TOWERLEFT
-      VISIBLE "From is: "
-      VISIBLE FROM  BTW debugger
-
       I IZ TOWERTHAR YR FROM MKAY
       O RLY?
         YA RLY
@@ -196,23 +193,26 @@ HAI 1.2
     IM IN YR LOOP
       VISIBLE "GIMMEH WARE TO MOVE TO"
       GIMMEH TO
-      FROM, WTF?
+      TO, WTF?
         OMG "LEFT"
-          FROM R TOWERLEFT
+          TO R TOWERLEFT
           GTFO
         OMG "MIDDLE"
-          FROM R TOWERMIDDLE
+          TO R TOWERMIDDLE
           GTFO
         OMG "RIGHT"
-          FROM R TOWERRIGHT
+          TO R TOWERRIGHT
           GTFO
         OMGWTF
           VISIBLE "BAD NAME TOWER!  AGAIN!!"
           BTW TODO make this reloop...
       OIC
 
-      I HAS A FROMTOP ITZ I IZ WATSONTOP YR FROM MKAY
-      I HAS A TOTOP ITZ I IZ WATSONTOP YR TO MKAY
+      VISIBLE "The FROM before being passed to WATSONTOP:"
+      VISIBLE FROM
+      VISIBLE ""
+      FROMTOP R I IZ WATSONTOP YR FROM MKAY
+      TOTOP R I IZ WATSONTOP YR TO MKAY
 
       I IZ CANMOVE YR FROMTOP AN YR TOTOP MKAY
       O RLY?
