@@ -1,9 +1,7 @@
-BTW THIS IS A LOLCODE TEST
-
 HAI 1.2
   CAN HAS STDIO?
 
-  I HAS A MOVES ITZ 0
+  I HAS A MOVEZ
 
   I HAS A TOWERLEFT ITZ "SMALLMEDIUMBIG"
   I HAS A TOWERMIDDLE ITZ "EMPTY"
@@ -137,7 +135,7 @@ HAI 1.2
     towers have (smaller) disks, causing an infinite loop.
   TLDR
 
-  
+
   IM IN YR LOOP UPPIN YR MOVES TIL I IZ WINNIN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
     VISIBLE SMOOSH "YOU MOVED " AN MOVES MKAY
     I IZ PRINTIN YR TOWERLEFT AN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
@@ -147,84 +145,98 @@ HAI 1.2
     I HAS A TO
     I HAS A TOCOMMAND
     I HAS A TOTOP
-    IM IN YR LOOP
-      IM IN YR LOOP
-        I HAS A PROBLEM ITZ FAIL
-        VISIBLE "GIMMEH WARE TO MOVE FROM"
-        GIMMEH FROMCOMMAND
-        FROMCOMMAND, WTF?
-          OMG "LEFT"
-            FROM R TOWERLEFT
-            GTFO
-          OMG "MIDDLE"
-            FROM R TOWERMIDDLE
-            GTFO
-          OMG "RIGHT"
-            FROM R TOWERRIGHT
-            GTFO
-          OMGWTF
-            PROBLEM R WIN
-        OIC
+    I HAS A BIGPROBLEM ITZ FAIL
+    IM IN YR LOOP  BTW beginning of master loop to get "from" and "to"
+      IM IN YR LOOP  BTW beginning of loop to get "from"
+        IM IN YR LOOP
+          I HAS A PROBLEM ITZ FAIL
+          VISIBLE "GIMMEH WARE TO MOVE FROM"
+          GIMMEH FROMCOMMAND
+          FROMCOMMAND, WTF?
+            OMG "LEFT"
+              FROM R TOWERLEFT
+              GTFO
+            OMG "MIDDLE"
+              FROM R TOWERMIDDLE
+              GTFO
+            OMG "RIGHT"
+              FROM R TOWERRIGHT
+              GTFO
+            OMGWTF
+              PROBLEM R WIN
+          OIC
 
-        PROBLEM
+          PROBLEM
+          O RLY?
+            YA RLY
+              VISIBLE "BAD NAME TOWER!  AGAIN!!"
+            NO WAI
+              GTFO
+          OIC
+        IM OUTTA YR LOOP
+
+        I IZ TOWERTHAR YR FROM MKAY
         O RLY?
           YA RLY
-            VISIBLE "BAD NAME TOWER!  AGAIN!!"
+            GTFO
           NO WAI
-            GTFO
-        OIC
-      IM OUTTA YR LOOP
-
-      I IZ TOWERTHAR YR FROM MKAY
-      O RLY?
-        YA RLY
-          GTFO
-        NO WAI
-          VISIBLE "NO TOWER THAR!!"
-      OIC
-
-    IM OUTTA YR LOOP  BTW end of loop to get "from"
-    IM IN YR LOOP
-      IM IN YR LOOP
-        I HAS A PROBLEM
-        VISIBLE "GIMMEH WARE TO MOVE TO"
-        GIMMEH TOCOMMAND
-        TOCOMMAND, WTF?
-          OMG "LEFT"
-            TO R TOWERLEFT
-            GTFO
-          OMG "MIDDLE"
-            TO R TOWERMIDDLE
-            GTFO
-          OMG "RIGHT"
-            TO R TOWERRIGHT
-            GTFO
-          OMGWTF
-            PROBLEM R WIN
+            VISIBLE "NO TOWER THAR!!"
         OIC
 
-        PROBLEM
+      IM OUTTA YR LOOP  BTW end of loop to get "from"
+      IM IN YR LOOP  BTW beginning of loop to get "to"
+        IM IN YR LOOP
+          I HAS A NOTHERPROBLEM
+          VISIBLE "GIMMEH WARE TO MOVE TO"
+          GIMMEH TOCOMMAND
+          TOCOMMAND, WTF?
+            OMG "LEFT"
+              TO R TOWERLEFT
+              GTFO
+            OMG "MIDDLE"
+              TO R TOWERMIDDLE
+              GTFO
+            OMG "RIGHT"
+              TO R TOWERRIGHT
+              GTFO
+            OMGWTF
+              NOTHERPROBLEM R WIN
+          OIC
+
+          NOTHERPROBLEM
+          O RLY?
+            YA RLY
+              VISIBLE "BAD NAME TOWER!  AGAIN!!"
+            NO WAI
+              GTFO
+          OIC
+        IM OUTTA YR LOOP
+
+        FROMTOP R I IZ WATSONTOP YR FROM MKAY
+        TOTOP R I IZ WATSONTOP YR TO MKAY
+
+        I IZ CANMOVE YR FROMTOP AN YR TOTOP MKAY
         O RLY?
           YA RLY
-            VISIBLE "BAD NAME TOWER!  AGAIN!!"
+            GTFO
           NO WAI
+            BIGPROBLEM R WIN
             GTFO
         OIC
-      IM OUTTA YR LOOP
 
-      FROMTOP R I IZ WATSONTOP YR FROM MKAY
-      TOTOP R I IZ WATSONTOP YR TO MKAY
 
-      I IZ CANMOVE YR FROMTOP AN YR TOTOP MKAY
+      IM OUTTA YR LOOP  BTW end of loop to get "to"
+
+      BIGPROBLEM
       O RLY?
         YA RLY
-          GTFO
+          VISIBLE "BAD MOVING!!1"  BTW Too heavy
+          BIGPROBLEM R FAIL
         NO WAI
-          VISIBLE "BAD MOVING!!1"
+          GTFO
       OIC
 
-
-    IM OUTTA YR LOOP  BTW end of loop to get "to"
+    IM OUTTA YR LOOP  BTW end of master loop to get "from" and "to"
 
     I HAS A NEWTO
     I HAS A NEWFROM
@@ -286,9 +298,11 @@ HAI 1.2
         GTFO
     OIC
 
+    MOVEZ R MOVES
   IM OUTTA YR LOOP  BTW end of main loop
 
   I IZ PRINTIN YR TOWERLEFT AN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
+  VISIBLE SMOOSH "YOU MOVED " AN SUM OF MOVEZ AN 1 MKAY
   VISIBLE "WIN!"
 
 KTHXBYE
