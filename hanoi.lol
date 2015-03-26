@@ -9,13 +9,15 @@ HAI 1.2
   I HAS A TOWERMIDDLE ITZ "EMPTY"
   I HAS A TOWERRIGHT ITZ "EMPTY"
 
-  HOW IZ I PRINTING YR TOWERLEFT AN YR TOWERMIDDLE AN YR TOWERRIGHT
+  HOW IZ I PRINTIN YR TOWERLEFT AN YR TOWERMIDDLE AN YR TOWERRIGHT
+    VISIBLE "======================"
     VISIBLE SMOOSH "LEFT:   " AN TOWERLEFT MKAY
     VISIBLE SMOOSH "MIDDLE: " AN TOWERMIDDLE MKAY
     VISIBLE SMOOSH "RIGHT:  " AN TOWERRIGHT MKAY
+    VISIBLE "======================"
   IF U SAY SO
 
-  HOW IZ I UWIN YR TOWERMIDDLE AN YR TOWERRIGHT
+  HOW IZ I WINNIN YR TOWERMIDDLE AN YR TOWERRIGHT
     BOTH SAEM TOWERMIDDLE AN "SMALLMEDIUMBIG"
     O RLY?
       YA RLY
@@ -128,9 +130,17 @@ HAI 1.2
 
     Very fun.
   TLDR
-  IM IN YR LOOP UPPIN YR MOVES TIL I IZ UWIN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
-    VISIBLE SMOOSH "YOU HAVE MOVED " AN MOVES MKAY
-    I IZ PRINTING YR TOWERLEFT AN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
+
+  OBTW
+    The loop to get "to" must be nested inside of the loop to get "from" to
+    prevent situations in which the "from" is the large disk, and both other
+    towers have (smaller) disks, causing an infinite loop.
+  TLDR
+
+  
+  IM IN YR LOOP UPPIN YR MOVES TIL I IZ WINNIN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
+    VISIBLE SMOOSH "YOU MOVED " AN MOVES MKAY
+    I IZ PRINTIN YR TOWERLEFT AN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
     I HAS A FROM
     I HAS A FROMCOMMAND
     I HAS A FROMTOP
@@ -138,22 +148,32 @@ HAI 1.2
     I HAS A TOCOMMAND
     I HAS A TOTOP
     IM IN YR LOOP
-      VISIBLE "GIMMEH WARE TO MOVE FROM"
-      GIMMEH FROMCOMMAND
-      FROMCOMMAND, WTF?
-        OMG "LEFT"
-          FROM R TOWERLEFT
-          GTFO
-        OMG "MIDDLE"
-          FROM R TOWERMIDDLE
-          GTFO
-        OMG "RIGHT"
-          FROM R TOWERRIGHT
-          GTFO
-        OMGWTF
-          VISIBLE "BAD NAME TOWER!  AGAIN!!"
-          BTW TODO make this reloop
-      OIC
+      IM IN YR LOOP
+        I HAS A PROBLEM ITZ FAIL
+        VISIBLE "GIMMEH WARE TO MOVE FROM"
+        GIMMEH FROMCOMMAND
+        FROMCOMMAND, WTF?
+          OMG "LEFT"
+            FROM R TOWERLEFT
+            GTFO
+          OMG "MIDDLE"
+            FROM R TOWERMIDDLE
+            GTFO
+          OMG "RIGHT"
+            FROM R TOWERRIGHT
+            GTFO
+          OMGWTF
+            PROBLEM R WIN
+        OIC
+
+        PROBLEM
+        O RLY?
+          YA RLY
+            VISIBLE "BAD NAME TOWER!  AGAIN!!"
+          NO WAI
+            GTFO
+        OIC
+      IM OUTTA YR LOOP
 
       I IZ TOWERTHAR YR FROM MKAY
       O RLY?
@@ -165,22 +185,32 @@ HAI 1.2
 
     IM OUTTA YR LOOP  BTW end of loop to get "from"
     IM IN YR LOOP
-      VISIBLE "GIMMEH WARE TO MOVE TO"
-      GIMMEH TOCOMMAND
-      TOCOMMAND, WTF?
-        OMG "LEFT"
-          TO R TOWERLEFT
-          GTFO
-        OMG "MIDDLE"
-          TO R TOWERMIDDLE
-          GTFO
-        OMG "RIGHT"
-          TO R TOWERRIGHT
-          GTFO
-        OMGWTF
-          VISIBLE "BAD NAME TOWER!  AGAIN!!"
-          BTW TODO make this reloop...
-      OIC
+      IM IN YR LOOP
+        I HAS A PROBLEM
+        VISIBLE "GIMMEH WARE TO MOVE TO"
+        GIMMEH TOCOMMAND
+        TOCOMMAND, WTF?
+          OMG "LEFT"
+            TO R TOWERLEFT
+            GTFO
+          OMG "MIDDLE"
+            TO R TOWERMIDDLE
+            GTFO
+          OMG "RIGHT"
+            TO R TOWERRIGHT
+            GTFO
+          OMGWTF
+            PROBLEM R WIN
+        OIC
+
+        PROBLEM
+        O RLY?
+          YA RLY
+            VISIBLE "BAD NAME TOWER!  AGAIN!!"
+          NO WAI
+            GTFO
+        OIC
+      IM OUTTA YR LOOP
 
       FROMTOP R I IZ WATSONTOP YR FROM MKAY
       TOTOP R I IZ WATSONTOP YR TO MKAY
@@ -258,7 +288,7 @@ HAI 1.2
 
   IM OUTTA YR LOOP  BTW end of main loop
 
-  I IZ PRINTING YR TOWERLEFT AN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
+  I IZ PRINTIN YR TOWERLEFT AN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
   VISIBLE "WIN!"
 
 KTHXBYE
