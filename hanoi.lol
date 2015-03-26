@@ -124,17 +124,11 @@ HAI 1.2
 
   OBTW
     The main game loop.
+  
 
 
     Very fun.
   TLDR
-
-  OBTW
-    The loop to get "to" must be nested inside of the loop to get "from" to
-    prevent situations in which the "from" is the large disk, and both other
-    towers have (smaller) disks, causing an infinite loop.
-  TLDR
-
 
   IM IN YR LOOP UPPIN YR MOVES TIL I IZ WINNIN YR TOWERMIDDLE AN YR TOWERRIGHT MKAY
     VISIBLE SMOOSH "YOU MOVED " AN MOVES MKAY
