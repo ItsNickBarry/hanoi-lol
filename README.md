@@ -1,5 +1,5 @@
-# hanoi-lol
-The hanoi-lol repository contains an implementation of [Towers of Hanoi][hanoi] in [LOLCODE][lolcode], the alleged language of LOLCATS.
+# Towers of Hanoi, in LOLCODE
+This repository contains an implementation of [Towers of Hanoi][hanoi] in [LOLCODE][lolcode], the alleged language of LOLCATS.
 
 The code is amusingly [human-readable][code].
 
