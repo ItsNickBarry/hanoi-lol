@@ -8,7 +8,7 @@ To run it, use Justin Meza's LOLCODE interpreter, [lci][lci].
 ## Highlights
 Comments in LOLCODE are expressed in an unassuming manner:
 ```lolcode
-BTW Too heavy
+BTW too heavy
 ```
 
 Nobody can be expected to read multi-line comments:
