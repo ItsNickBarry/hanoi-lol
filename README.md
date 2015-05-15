@@ -22,7 +22,7 @@ TLDR
 
 One must be polite to the LOLCODE interpreter:
 ```lolcode
-HAI
+HAI 1.2
   BTW code goes here
 KTHXBYE
 ```
