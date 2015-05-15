@@ -47,8 +47,6 @@ HAI 1.2
   IF U SAY SO
 
   HOW IZ I WATSONTOP YR TOWER
-    VISIBLE "IN watsontop: "
-    VISIBLE TOWER
     TOWER, WTF?
       OMG "SMALLMEDIUMBIG"
         FOUND YR "SMALL"
@@ -124,8 +122,6 @@ HAI 1.2
 
   OBTW
     The main game loop.
-  
-
 
     Very fun.
   TLDR
@@ -224,7 +220,7 @@ HAI 1.2
       BIGPROBLEM
       O RLY?
         YA RLY
-          VISIBLE "BAD MOVING!!1"  BTW Too heavy
+          VISIBLE "BAD MOVING!!1"  BTW too heavy!
           BIGPROBLEM R FAIL
         NO WAI
           GTFO
