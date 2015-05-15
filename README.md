@@ -34,7 +34,7 @@ I HAS A TOWERMIDDLE ITZ "EMPTY"
 I HAS A TOWERRIGHT ITZ "EMPTY"
 ```
 
-Because LOLCODE does not support string manipulation beyond concatenation, "WTF?" statements are required to determine the state of the towers:
+Because LOLCODE does not support string manipulation beyond concatenation, "WTF?" statements are required to determine the state of the towers and act accordingly:
 ```lolcode
 FROM, WTF?
   OMG "SMALLMEDIUMBIG"
